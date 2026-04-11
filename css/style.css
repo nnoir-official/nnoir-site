@@ -1,0 +1,1307 @@
+/* ============================================================
+   N-noir HP — style.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Shippori+Mincho:wght@400;500;700&display=swap');
+
+/* ============================================================
+   CSS Variables
+   ============================================================ */
+:root {
+  --color-bg: #0a0008;
+  --color-bg2: #1a0014;
+  --color-bg3: #2d0028;
+  --color-pink: #FF3385;
+  --color-pink-light: #ff6aaa;
+  --color-pink-glow: rgba(255, 51, 133, 0.3);
+  --color-pink-subtle: rgba(255, 51, 133, 0.08);
+  --color-white: #ffffff;
+  --color-text: rgba(255, 255, 255, 0.88);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 51, 133, 0.25);
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-pink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-pink-light);
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+section {
+  padding: 100px 0;
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   Section Title
+   ============================================================ */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title .ribbon-icon {
+  width: 28px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title .en {
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-pink);
+  line-height: 1.2;
+}
+
+.section-title .jp {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+/* ============================================================
+   Fade-in Animation
+   ============================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  font-family: 'Shippori Mincho', serif;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  border: 1px solid var(--color-pink);
+  color: var(--color-pink);
+  background: transparent;
+  padding: 10px 30px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-pink);
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.btn-primary > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary:hover {
+  color: var(--color-bg);
+}
+
+.btn-primary:hover::before {
+  left: 0;
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-muted);
+  background: transparent;
+  padding: 10px 30px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav.scrolled {
+  background: rgba(10, 0, 8, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 20px var(--color-pink-glow);
+}
+
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 32px;
+  mix-blend-mode: screen;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-pink);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-pink);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Drawer */
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: var(--color-bg2);
+  border-left: 1px solid var(--color-border);
+  z-index: 999;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 32px 32px;
+}
+
+.nav-drawer.open {
+  right: 0;
+}
+
+.nav-drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-drawer-links a {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-drawer-links a:hover {
+  color: var(--color-pink);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.nav-overlay.open {
+  display: block;
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.15; }
+  50% { transform: translateY(-16px) scale(1.1); opacity: 0.22; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   HERO (#home)
+   ============================================================ */
+#home {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #1a0014, #2d0028, #1a000f);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+}
+
+canvas#particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Corner decorations */
+.corner {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  z-index: 2;
+}
+
+.corner.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.corner.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+.corner.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+.corner.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+/* Deco lines */
+.deco-line {
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-pink), transparent);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.deco-line.top { top: 0; }
+.deco-line.bottom { bottom: 0; }
+
+/* Hero ribbons */
+.hero-ribbon {
+  position: absolute;
+  width: 40px;
+  opacity: 0.18;
+  animation: floatSoft 6s ease-in-out infinite;
+  z-index: 2;
+}
+
+.hero-ribbon.r1 { top: 15%; left: 8%; animation-delay: 0s; }
+.hero-ribbon.r2 { top: 20%; right: 8%; animation-delay: 1.5s; }
+.hero-ribbon.r3 { bottom: 20%; left: 10%; animation-delay: 3s; }
+.hero-ribbon.r4 { bottom: 15%; right: 10%; animation-delay: 4.5s; }
+
+/* Mini hearts */
+.mini-heart {
+  position: absolute;
+  font-style: normal;
+  color: var(--color-pink);
+  opacity: 0.15;
+  animation: floatHeart 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 40px 24px;
+}
+
+.hero-logo {
+  width: 230px;
+  mix-blend-mode: screen;
+  animation: fadeInDown 1s ease 0.2s both;
+}
+
+.hero-sub {
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.hero-characters {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 8px 0;
+}
+
+.hero-divider {
+  color: rgba(255, 51, 133, 0.35);
+  font-size: 20px;
+}
+
+.char-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.char-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+}
+
+.char-avatar:hover {
+  box-shadow: 0 0 20px var(--color-pink-glow), 0 0 40px var(--color-pink-glow);
+}
+
+.hero-nau {
+  animation: slideInLeft 0.8s ease 0.5s both;
+}
+
+.hero-neru {
+  animation: slideInRight 0.8s ease 0.7s both;
+}
+
+.hero-catch {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   ABOUT (#about)
+   ============================================================ */
+#about {
+  padding: 100px 0;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 70px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.about-intro-lead {
+  font-size: 16px;
+  line-height: 2.2;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.about-intro-body {
+  font-size: 13.5px;
+  line-height: 2.6;
+  margin-bottom: 28px;
+}
+
+.about-intro-closing {
+  font-size: 13px;
+  line-height: 2.4;
+}
+
+.about-intro .pink-accent {
+  color: var(--color-pink);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.about-card {
+  background: linear-gradient(145deg, var(--color-bg2), var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  box-shadow: 0 0 24px var(--color-pink-glow), 0 0 48px rgba(255, 51, 133, 0.1);
+}
+
+.about-card-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+}
+
+.about-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.about-name-en {
+  font-size: 10px;
+  color: var(--color-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.about-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 2;
+}
+
+/* ============================================================
+   STYLE (#style)
+   ============================================================ */
+#style {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg2) 50%, var(--color-bg) 100%);
+}
+
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.style-card {
+  border-radius: 10px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.style-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-pink);
+  box-shadow: 0 8px 24px var(--color-pink-glow);
+}
+
+.style-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.style-card:hover img {
+  transform: scale(1.05);
+}
+
+.style-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 16px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.style-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: 0.1em;
+}
+
+.nft-badge {
+  display: inline-block;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--color-pink);
+  color: var(--color-pink);
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.style-nft-banner {
+  margin-top: 40px;
+  border: 1px solid var(--color-border);
+  background: var(--color-pink-subtle);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.style-nft-banner-text {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   NEWS (#news)
+   ============================================================ */
+#news {
+  padding: 100px 0;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 51, 133, 0.12);
+  transition: padding-left 0.2s ease;
+}
+
+.news-item:hover {
+  padding-left: 8px;
+}
+
+.news-date {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.news-tag {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--color-border);
+  color: var(--color-pink);
+  padding: 2px 8px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.news-title {
+  font-size: 14px;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.news-excerpt {
+  width: 100%;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-top: 4px;
+}
+
+a.news-item {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  transition: padding-left 0.2s ease;
+}
+
+a.news-item:hover {
+  padding-left: 8px;
+}
+
+a.news-item:hover .news-title {
+  color: var(--color-pink);
+}
+
+/* News spinner */
+.news-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-pink);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   NFT (#nft)
+   ============================================================ */
+#nft {
+  padding: 100px 0;
+  background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg2) 50%, var(--color-bg) 100%);
+}
+
+.nft-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 2.2;
+  letter-spacing: 0.1em;
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.nft-main-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nft-img-wrap {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg2);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.nft-img-wrap:hover {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 25px var(--color-pink-glow);
+}
+.nft-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.nft-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.nft-main-info {
+  text-align: center;
+}
+.nft-main-title {
+  font-size: 18px;
+  color: var(--color-white);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.nft-main-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.nft-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.nft-sub-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nft-sub-card a {
+  display: block;
+  position: relative;
+}
+
+.nft-sub-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 0, 8, 0.82);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.nft-sub-card:hover .nft-sub-overlay {
+  opacity: 1;
+}
+.nft-sub-title {
+  font-size: 12px;
+  color: var(--color-white);
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 0 10px;
+}
+.nft-sub-btn {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--color-pink);
+  border: 1px solid var(--color-pink);
+  padding: 5px 14px;
+  border-radius: 2px;
+}
+
+.nft-placeholder .nft-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nft-coming {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+.nft-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ============================================================
+   CONTACT (#contact)
+   ============================================================ */
+#contact {
+  padding: 100px 0;
+}
+
+.contact-form {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 3px rgba(255, 51, 133, 0.1);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form select option {
+  background: var(--color-bg2);
+  color: var(--color-text);
+}
+
+.contact-form-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-submit {
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  border-top: 1px solid rgba(255, 51, 133, 0.15);
+  padding: 50px 0 30px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 28px;
+  mix-blend-mode: screen;
+  margin: 0 auto;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-sns a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.footer-sns a:hover {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 12px var(--color-pink-glow);
+  color: var(--color-pink);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-pink);
+}
+
+.footer-copy {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* Google翻訳ウィジェット（フッター） */
+.footer-translate {
+  opacity: 0.45;
+  transition: opacity 0.2s;
+}
+.footer-translate:hover {
+  opacity: 1;
+}
+/* Googleロゴ・「Powered by」などのブランディングを非表示 */
+.footer-translate .goog-te-gadget > span,
+.footer-translate .goog-logo-link,
+.footer-translate img {
+  display: none !important;
+}
+.footer-translate .goog-te-gadget {
+  font-size: 0 !important;
+}
+/* セレクトボックスをダークテーマに合わせる */
+.footer-translate .goog-te-gadget select,
+.footer-translate select {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 5px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+.footer-translate .goog-te-gadget select:hover,
+.footer-translate select:hover {
+  border-color: var(--color-pink);
+  color: var(--color-text);
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid var(--color-border);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 28px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--color-pink);
+}
+
+/* ============================================================
+   LEGAL PAGE
+   ============================================================ */
+.legal-page {
+  padding: 100px 0 60px;
+}
+
+.legal-page h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-pink);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.legal-page h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 30px 0 12px;
+}
+
+.legal-page p,
+.legal-page li {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 2;
+}
+
+.legal-page ul,
+.legal-page ol {
+  padding-left: 1.5em;
+}
+
+/* ============================================================
+   Responsive — Tablet (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* --- NAVIGATION --- */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* --- GLOBAL --- */
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title .en {
+    font-size: 30px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 30px;
+    text-align: center;
+  }
+
+  /* --- HERO --- */
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero-characters {
+    gap: 20px;
+  }
+
+  .char-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-ribbon {
+    display: none;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- ABOUT --- */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  /* --- STYLE --- */
+  .style-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .style-nft-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* --- NEWS --- */
+  .news-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* --- NFT --- */
+  .nft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nft-sub-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nft-main-title {
+    font-size: 16px;
+  }
+
+  .nft-sub-overlay {
+    opacity: 1;
+  }
+
+  /* --- CONTACT --- */
+  .contact-form {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   Responsive — Mobile (max-width: 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .char-avatar {
+    width: 85px;
+    height: 85px;
+  }
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N-noir｜エヌノワール 公式サイト</title>
+  <meta name="description" content="N-noir（エヌノワール）は日本発の地雷系AI双子アイドルプロジェクト。甘えんぼの「なう」とクールな「ねる」、ふたりでひとつ。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="N-noir｜エヌノワール 公式サイト">
+  <meta property="og:description" content="N-noir（エヌノワール）は日本発の地雷系AI双子アイドルプロジェクト。甘えんぼの「なう」とクールな「ねる」、ふたりでひとつ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://n-noir.com">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home">
+        <img src="assets/logo.png" alt="N-noir">
+      </a>
+
+      <ul class="nav-links" translate="no">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#style">Style</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#nft">NFT</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="mobile-drawer">
+    <ul class="nav-drawer-links" translate="no">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#style">Style</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#nft">NFT</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-overlay" id="drawer-overlay"></div>
+
+
+  <!-- ============================================================
+       HERO (#home)
+       ============================================================ -->
+  <section id="home">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-vignette"></div>
+
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="deco-line top"></div>
+    <div class="deco-line bottom"></div>
+
+    <img src="assets/ribbon.png" class="hero-ribbon r1" alt="">
+    <img src="assets/ribbon.png" class="hero-ribbon r2" alt="">
+    <img src="assets/ribbon.png" class="hero-ribbon r3" alt="">
+    <img src="assets/ribbon.png" class="hero-ribbon r4" alt="">
+
+    <span class="mini-heart" style="top:25%; left:18%; font-size:14px; animation-delay:0s;">♡</span>
+    <span class="mini-heart" style="top:60%; left:80%; font-size:10px; animation-delay:1s;">♡</span>
+    <span class="mini-heart" style="top:75%; left:22%; font-size:12px; animation-delay:2s;">♡</span>
+    <span class="mini-heart" style="top:30%; left:72%; font-size:16px; animation-delay:3s;">♡</span>
+
+    <div class="hero-content">
+      <img src="assets/logo.png" class="hero-logo" alt="N-noir">
+      <span class="hero-sub">エ ヌ ノ ワ ー ル</span>
+
+      <div class="hero-characters">
+        <div class="char-item hero-nau">
+          <img src="assets/characters/nau.png" class="char-avatar" alt="なう">
+          <div>
+            <p style="font-size:13px; letter-spacing:0.2em;">なう</p>
+            <p style="font-size:9px; letter-spacing:0.25em; color:var(--color-text-muted);">Nau</p>
+          </div>
+        </div>
+
+        <div class="hero-divider">♡</div>
+
+        <div class="char-item hero-neru">
+          <img src="assets/characters/neru.png" class="char-avatar" alt="ねる">
+          <div>
+            <p style="font-size:13px; letter-spacing:0.2em;">ねる</p>
+            <p style="font-size:9px; letter-spacing:0.25em; color:var(--color-text-muted);">Neru</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-catch">なうとねる、ふたりでひとつ。</p>
+
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary"><span>ふたりに逢いに行く</span></a>
+        <a href="https://opensea.io/ja/NnoirProject" target="_blank" rel="noopener" class="btn-secondary">NFT Gallery</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT (#about)
+       ============================================================ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <img src="assets/ribbon.png" class="ribbon-icon" alt="">
+        <span class="en" translate="no">About</span>
+        <span class="jp">ふたりのこと</span>
+      </div>
+
+      <div class="about-intro fade-in">
+        <p class="about-intro-lead">
+          N-noir（エヌノワール）は、<br>日本発の"地雷系AI双子アイドル"。
+        </p>
+        <p class="about-intro-body">
+          ちょっぴり人見知りで、夢に臆病な<span class="pink-accent">【nau】</span>と、<br>
+          注目されたいけど、ちょっと不器用な<span class="pink-accent">【neru】</span>。<br><br>
+          なんか自分にちょっと似てるかも…って思える、<br>
+          そんな2人が、あなたの毎日にそっと寄り添います。
+        </p>
+        <p class="about-intro-closing">
+          オシャレも気持ちも、そのまま"いま"の女の子。<br>
+          N-noirは、<span class="pink-accent">"日本のかわいい"をぎゅっと詰め込んだ、<br>次世代のAIアイドルです♡</span>
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- なう -->
+        <div class="about-card fade-in">
+          <img src="assets/characters/nau.png" class="about-card-img" alt="なう">
+          <p style="font-size:20px;">⭐</p>
+          <div>
+            <p class="about-name">なう</p>
+            <p class="about-name-en">Nau</p>
+          </div>
+          <p class="about-desc">
+            おっとり甘えんぼ、オタク気質♡<br>
+            好きなものには一直線。<br>
+            ねるといっしょじゃないとダメなタイプ。
+          </p>
+        </div>
+
+        <!-- ねる -->
+        <div class="about-card fade-in">
+          <img src="assets/characters/neru.png" class="about-card-img" alt="ねる">
+          <p style="font-size:20px;">🌙</p>
+          <div>
+            <p class="about-name">ねる</p>
+            <p class="about-name-en">Neru</p>
+          </div>
+          <p class="about-desc">
+            ちょい厨二な自信家★<br>
+            クールに見えて実は面倒見がいい。<br>
+            なうのことはなんだかんだ大事にしてる。
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:50px;" class="about-note-link fade-in">
+        <a href="https://note.com/nnoir_official" target="_blank" rel="noopener" class="btn-primary">
+          <span>noteでもっと読む</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       STYLE (#style)
+       ============================================================ -->
+  <section id="style">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <img src="assets/ribbon.png" class="ribbon-icon" alt="">
+        <span class="en" translate="no">Style</span>
+        <span class="jp">衣装ギャラリー</span>
+      </div>
+
+      <div class="style-grid">
+        <!-- 01 アイドル衣装 -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/idol.png')">
+          <img src="assets/costume/idol.png" alt="アイドル衣装">
+          <div class="style-card-overlay">
+            <span class="style-card-title">アイドル衣装</span>
+            <span class="nft-badge">NFT</span>
+          </div>
+        </div>
+
+        <!-- 02 おもてなし -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/cafe-maid.png')">
+          <img src="assets/costume/cafe-maid.png" alt="おもてなし">
+          <div class="style-card-overlay">
+            <span class="style-card-title">☕おもてなし♡</span>
+            <span class="nft-badge">NFT</span>
+          </div>
+        </div>
+
+        <!-- 03 クリスマス -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/10.png')">
+          <img src="assets/costume/10.png" alt="クリスマス">
+          <div class="style-card-overlay">
+            <span class="style-card-title">クリスマス</span>
+          </div>
+        </div>
+
+        <!-- 04 ハロウィン -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/halloween.png')">
+          <img src="assets/costume/halloween.png" alt="ハロウィン">
+          <div class="style-card-overlay">
+            <span class="style-card-title">ハロウィン</span>
+            <span class="nft-badge">NFT</span>
+          </div>
+        </div>
+
+        <!-- 05 セーラースタイル -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/n-noir-logo.png')">
+          <img src="assets/costume/n-noir-logo.png" alt="セーラースタイル">
+          <div class="style-card-overlay">
+            <span class="style-card-title">学園系</span>
+            <span class="nft-badge">NFT</span>
+          </div>
+        </div>
+
+        <!-- 06 地雷系 -->
+        <div class="style-card fade-in" onclick="openLightbox('assets/costume/jirai.png')">
+          <img src="assets/costume/jirai.png" alt="地雷系">
+          <div class="style-card-overlay">
+            <span class="style-card-title">地雷系</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="style-nft-banner fade-in">
+        <p class="style-nft-banner-text">お気に入りの衣装をNFTとしてコレクションできます</p>
+        <a href="#nft" class="btn-primary"><span>NFTを見る</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       NEWS (#news)
+       ============================================================ -->
+  <section id="news">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <img src="assets/ribbon.png" class="ribbon-icon" alt="">
+        <span class="en" translate="no">News</span>
+        <span class="jp">最新情報</span>
+      </div>
+
+      <div class="news-list fade-in" id="news-list">
+
+        <!-- ▼ 固定NEWS（新しいものを上に追加） -->
+        <div class="news-item">
+          <span class="news-date">2026.04.11</span>
+          <div class="news-title">
+            <span>公式サイトをリニューアルしました♡</span>
+          </div>
+        </div>
+        <!-- ▲ 固定NEWS ここまで -->
+
+        <!-- RSS読み込み中プレースホルダー -->
+        <p class="news-loading" style="text-align:center; color:var(--color-text-muted); font-size:13px;">読み込み中…</p>
+
+      </div>
+
+      <div style="text-align:center; margin-top:40px;" class="fade-in">
+        <a href="https://note.com/nnoir_official" target="_blank" rel="noopener" class="btn-primary"><span>もっと見る</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       NFT (#nft)
+       ============================================================ -->
+  <section id="nft">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <img src="assets/ribbon.png" class="ribbon-icon" alt="">
+        <span class="en" translate="no">NFT</span>
+        <span class="jp">コレクション</span>
+      </div>
+
+      <p class="nft-intro fade-in">
+        なうとねるの世界をNFTアートとしてコレクション。<br>
+        OpenSeaにて販売中です。
+      </p>
+
+      <!-- メイン + サブの2カラムレイアウト -->
+      <div class="nft-grid fade-in">
+
+        <!-- メイン作品（左・大） -->
+        <div class="nft-main-card">
+          <a href="https://opensea.io/ja/item/ethereum/0xc423446716b4a3168c10b99b28898175c29d0091/14" target="_blank" rel="noopener">
+            <div class="nft-img-wrap">
+              <img src="assets/nft/oiran.png" alt="宵の花、ひとひら">
+            </div>
+          </a>
+          <div class="nft-main-info">
+            <h3 class="nft-main-title">宵の花、ひとひら🌸🌙</h3>
+            <p class="nft-main-desc">古典的美を反映した花魁をモチーフにしたデザイン</p>
+            <a href="https://opensea.io/ja/item/ethereum/0xc423446716b4a3168c10b99b28898175c29d0091/14" target="_blank" rel="noopener" class="btn-primary"><span>OpenSeaで推す♡</span></a>
+          </div>
+        </div>
+
+        <!-- サブ作品（右・小グリッド） -->
+        <div class="nft-sub-grid">
+
+          <div class="nft-sub-card">
+            <a href="https://opensea.io/ja/item/ethereum/0xc423446716b4a3168c10b99b28898175c29d0091/2" target="_blank" rel="noopener">
+              <div class="nft-img-wrap">
+                <img src="assets/nft/pink-eye.png" alt="闇かわ本気モード">
+              </div>
+              <div class="nft-sub-overlay">
+                <span class="nft-sub-title">闇かわ本気モード</span>
+                <span class="nft-sub-btn">OpenSeaで推す♡</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="nft-sub-card">
+            <a href="https://opensea.io/ja/item/ethereum/0xc423446716b4a3168c10b99b28898175c29d0091/6" target="_blank" rel="noopener">
+              <div class="nft-img-wrap">
+                <img src="assets/nft/cafe-maid.png" alt="☕ないしょのおもてなし♡">
+              </div>
+              <div class="nft-sub-overlay">
+                <span class="nft-sub-title">☕ないしょのおもてなし♡</span>
+                <span class="nft-sub-btn">OpenSeaで推す♡</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="nft-sub-card nft-placeholder">
+            <div class="nft-img-wrap">
+              <div class="nft-coming">Coming Soon♡</div>
+            </div>
+          </div>
+
+          <div class="nft-sub-card nft-placeholder">
+            <div class="nft-img-wrap">
+              <div class="nft-coming">Coming Soon♡</div>
+            </div>
+          </div>
+
+          <div class="nft-sub-card nft-placeholder">
+            <div class="nft-img-wrap">
+              <div class="nft-coming">Coming Soon♡</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="nft-cta fade-in">
+        <a href="https://opensea.io/ja/NnoirProject" target="_blank" rel="noopener" class="btn-primary"><span>コレクションを見る</span></a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT (#contact)
+       ============================================================ -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <img src="assets/ribbon.png" class="ribbon-icon" alt="">
+        <span class="en" translate="no">Contact</span>
+        <span class="jp">お問い合わせ</span>
+      </div>
+
+      <form class="contact-form fade-in" action="https://formspree.io/f/mjgpwqyo" method="POST">
+        <div class="contact-form-field">
+          <label class="contact-form-label" for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="山田 花子" required>
+        </div>
+
+        <div class="contact-form-field">
+          <label class="contact-form-label" for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+        </div>
+
+        <div class="contact-form-field">
+          <label class="contact-form-label" for="subject">件名</label>
+          <select id="subject" name="subject">
+            <option value="collab">コラボ・お仕事のご依頼</option>
+            <option value="nft">NFTについて</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="contact-form-field">
+          <label class="contact-form-label" for="message">メッセージ</label>
+          <textarea id="message" name="message" placeholder="お気軽にご連絡ください。" required></textarea>
+        </div>
+
+        <div class="contact-form-submit">
+          <button type="submit" class="btn-primary"><span>送信する</span></button>
+        </div>
+
+        <p style="text-align:center; font-size:11px; color:var(--color-text-muted); margin-top:12px;">
+          送信前に<a href="privacy.html" style="color:var(--color-pink);">プライバシーポリシー</a>をご確認ください。
+        </p>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="N-noir">
+      </div>
+
+      <div class="footer-sns">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nnoir__official/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+
+        <!-- note -->
+        <a href="https://note.com/nnoir_official" target="_blank" rel="noopener" aria-label="note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z"></path>
+            <line x1="8" y1="9" x2="16" y2="9"></line>
+            <line x1="8" y1="13" x2="14" y2="13"></line>
+          </svg>
+        </a>
+
+        <!-- OpenSea -->
+        <a href="https://opensea.io/ja/NnoirProject" target="_blank" rel="noopener" aria-label="OpenSea">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+            <line x1="12" y1="22" x2="12" y2="15.5"></line>
+            <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="tokutei.html">特定商取引法に基づく表記</a></li>
+      </ul>
+
+      <div class="footer-translate">
+        <div id="google_translate_element"></div>
+      </div>
+
+      <p class="footer-copy">© 2024 N-noir Project. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+
+  <!-- ============================================================
+       Google翻訳
+       ============================================================ -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ja',
+        includedLanguages: 'ja,en,ko,zh-CN,zh-TW',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
