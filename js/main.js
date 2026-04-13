@@ -183,16 +183,32 @@ document.addEventListener('keydown', (e) => {
         const raw     = (item.description || '').replace(/<[^>]*>/g, '');
         const excerpt = raw.length > 100 ? raw.slice(0, 100) + '…' : raw;
 
+        // リンク先がhttpsでない場合は安全のためスキップ
+        if (link !== '#' && !link.startsWith('https://')) return;
+
         const a = document.createElement('a');
         a.className   = 'news-item';
         a.href        = link;
         a.target      = '_blank';
         a.rel         = 'noopener';
-        a.innerHTML   = `
-          <span class="news-date">${date}</span>
-          <span class="news-tag">NOTE</span>
-          <span class="news-title">${title}</span>
-          <span class="news-excerpt">${excerpt}</span>`;
+
+        const elDate    = document.createElement('span');
+        elDate.className   = 'news-date';
+        elDate.textContent = date;
+
+        const elTag     = document.createElement('span');
+        elTag.className    = 'news-tag';
+        elTag.textContent  = 'NOTE';
+
+        const elTitle   = document.createElement('span');
+        elTitle.className  = 'news-title';
+        elTitle.textContent = title;
+
+        const elExcerpt = document.createElement('span');
+        elExcerpt.className  = 'news-excerpt';
+        elExcerpt.textContent = excerpt;
+
+        a.append(elDate, elTag, elTitle, elExcerpt);
         list.appendChild(a);
       });
     })
