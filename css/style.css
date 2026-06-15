@@ -750,6 +750,22 @@ canvas#particle-canvas {
   margin-top: 4px;
 }
 
+/* 固定NEWS（LINEスタンプ告知）の本文：日付＋バッジ分だけ右に寄せて読みやすく */
+.news-excerpt--pinned {
+  box-sizing: border-box;
+  padding-left: 114px;
+}
+
+/* 本文の内側だけ幅を抑えて、横に長くなりすぎないようにする */
+.news-excerpt--pinned .news-excerpt-body {
+  display: inline-block;
+  max-width: 560px;
+}
+
+.news-excerpt--pinned a:hover {
+  text-decoration: underline;
+}
+
 a.news-item {
   display: flex;
   flex-wrap: wrap;
@@ -1260,6 +1276,14 @@ footer {
   .news-item {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .news-excerpt--pinned {
+    padding-left: 0;
+  }
+
+  .news-excerpt--pinned .news-excerpt-body {
+    max-width: 100%;
   }
 
   /* --- NFT --- */
