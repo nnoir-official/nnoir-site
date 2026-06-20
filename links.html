@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N-noir｜リンク</title>
+  <meta name="description" content="N-noir（なう＆ねる）の各リンクまとめ">
+  <style>
+    :root{
+      --pink-bg:#FAD1E3;        /* 1〜4番：淡いピンク背景 */
+      --pink-text:#D6337E;      /* 1〜4番：濃いピンク文字 */
+      --accent-bg:#E93C87;      /* 5番：濃いめのピンク */
+      --page-bg:#FCE7F1;        /* ページ背景（やさしいピンク） */
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      min-height:100vh;
+      background-color:var(--page-bg);
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60,64C60,64,50,58,50,52C50,49,52,47,54.5,47C57,47,60,49.5,60,49.5C60,49.5,63,47,65.5,47C68,47,70,49,70,52C70,58,60,64,60,64Z' fill='%23EFB7D1' fill-opacity='0.4'/%3E%3C/svg%3E");
+      background-size:120px 120px;
+      font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN",
+                  "Rounded Mplus 1c","M PLUS Rounded 1c",system-ui,
+                  -apple-system,"Segoe UI",sans-serif;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:26px 0 0;
+    }
+    .logo{
+      width:62%;
+      max-width:300px;
+      height:auto;
+      opacity:.65;            /* ロゴは薄め・控えめ */
+      margin:6px 0 4px;
+    }
+    .tagline{
+      color:var(--pink-text);
+      font-size:.95rem;
+      font-weight:700;
+      text-align:center;
+      line-height:1.5;
+      width:86%;
+      max-width:540px;
+      margin:0 0 22px;
+    }
+    .links{
+      width:86%;
+      max-width:540px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .link-btn{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      width:100%;
+      min-width:0;
+      min-height:66px;
+      padding:14px 20px;
+      border-radius:18px;
+      background:var(--pink-bg);
+      color:var(--pink-text);
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 6px 16px rgba(214,51,126,.18);
+      transition:transform .18s ease, box-shadow .18s ease;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .link-btn .icon{
+      flex:0 0 46px;
+      width:46px;
+      height:46px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .link-btn .icon svg{width:28px;height:28px;display:block;}
+    .link-btn .label{
+      font-size:1.05rem;
+      line-height:1.35;
+      min-width:0;
+      overflow-wrap:break-word;
+    }
+    .link-btn:hover,
+    .link-btn:focus-visible,
+    .link-btn:active{
+      transform:translateY(-2px) scale(1.02);
+      box-shadow:0 10px 22px rgba(214,51,126,.28);
+      outline:none;
+    }
+    /* 5番：アクセント（形・サイズは他と同一、色だけ変更） */
+    .link-btn.accent{
+      background:var(--accent-bg);
+      color:#ffffff;
+      box-shadow:0 8px 20px rgba(233,60,135,.45);
+    }
+    .link-btn.accent:hover,
+    .link-btn.accent:focus-visible,
+    .link-btn.accent:active{
+      box-shadow:0 12px 26px rgba(233,60,135,.55);
+    }
+    /* 下の2人（高さ揃え済みの素材） */
+    .characters{
+      width:100%;
+      max-width:600px;
+      margin-top:auto;          /* ページ下部に寄せる */
+      padding-top:28px;
+      display:block;
+    }
+    .characters img{
+      display:block;
+      width:96%;
+      max-width:560px;
+      height:auto;
+      margin:0 auto;
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="assets/links/logo.png" alt="N-noir ロゴ">
+  <p class="tagline">AI双子アイドル N-noir 🎀 なう &amp; ねる</p>
+
+  <nav class="links" aria-label="N-noir 各種リンク">
+
+    <!-- 1. note -->
+    <a class="link-btn" href="https://note.com/nnoir_official"
+       target="_blank" rel="noopener noreferrer" aria-label="note（4コマ漫画）を開く">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#41C9B4" d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/>
+        </svg>
+      </span>
+      <span class="label">Note（4コマ漫画）</span>
+    </a>
+
+    <!-- 2. OpenSea -->
+    <a class="link-btn" href="https://opensea.io/ja/NnoirProject"
+       target="_blank" rel="noopener noreferrer" aria-label="OpenSea（NFTコレクション）を開く">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#2081E2" d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.629 0 12 0ZM5.92 12.403l.051-.081 3.123-4.884a.107.107 0 0 1 .187.014c.52 1.169.972 2.623.76 3.528-.088.372-.335.876-.614 1.342a2.405 2.405 0 0 1-.117.199.106.106 0 0 1-.09.045H6.013a.106.106 0 0 1-.091-.163zm13.914 1.68a.109.109 0 0 1-.065.101c-.243.103-1.07.485-1.414.962-.878 1.222-1.548 2.97-3.048 2.97H9.053a4.019 4.019 0 0 1-4.013-4.028v-.072c0-.058.048-.106.108-.106h3.485c.07 0 .12.063.115.132-.026.226.017.459.125.67.206.42.636.682 1.099.682h1.726v-1.347H9.99a.11.11 0 0 1-.089-.173l.063-.09c.16-.231.391-.586.621-.992.156-.274.308-.566.43-.86.024-.052.043-.107.065-.16.033-.094.067-.182.091-.269a4.57 4.57 0 0 0 .065-.223c.057-.25.081-.514.081-.787 0-.108-.004-.221-.014-.327-.005-.117-.02-.235-.034-.352a3.415 3.415 0 0 0-.048-.312 6.494 6.494 0 0 0-.098-.468l-.014-.06c-.03-.108-.056-.21-.09-.317a11.824 11.824 0 0 0-.328-.972 5.212 5.212 0 0 0-.142-.355c-.072-.178-.146-.339-.213-.49a3.564 3.564 0 0 1-.094-.197 4.658 4.658 0 0 0-.103-.213c-.024-.053-.053-.104-.072-.152l-.211-.388c-.029-.053.019-.118.077-.101l1.32.357h.01l.173.05.192.054.07.019v-.783c0-.379.302-.686.679-.686a.66.66 0 0 1 .477.202.69.69 0 0 1 .2.484V6.65l.141.039c.01.005.022.01.031.017.034.024.084.062.147.11.05.038.103.086.165.137a10.351 10.351 0 0 1 .574.504c.214.199.454.432.684.691.065.074.127.146.192.226.062.079.132.156.19.232.079.104.16.212.235.324.033.053.074.108.105.161.096.142.178.288.257.435.034.067.067.141.096.213.089.197.159.396.202.598a.65.65 0 0 1 .029.132v.01c.014.057.019.12.024.184a2.057 2.057 0 0 1-.106.874c-.031.084-.06.17-.098.254-.075.17-.161.343-.264.502-.034.06-.075.122-.113.182-.043.063-.089.123-.127.18a3.89 3.89 0 0 1-.173.221c-.053.072-.106.144-.166.209-.081.098-.16.19-.245.278-.048.058-.1.118-.156.17-.052.06-.108.113-.156.161-.084.084-.15.147-.208.202l-.137.122a.102.102 0 0 1-.072.03h-1.051v1.346h1.322c.295 0 .576-.104.804-.298.077-.067.415-.36.816-.802a.094.094 0 0 1 .05-.03l3.65-1.057a.108.108 0 0 1 .138.103z"/>
+        </svg>
+      </span>
+      <span class="label">OpenSea（NFTコレクション）</span>
+    </a>
+
+    <!-- 3. 公式サイト（globe：線アイコン・モノクロ） -->
+    <a class="link-btn" href="https://n-noir.com"
+       target="_blank" rel="noopener noreferrer" aria-label="公式サイトを開く">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D6337E" stroke-width="1.6"
+             stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="9.2"/>
+          <ellipse cx="12" cy="12" rx="4" ry="9.2"/>
+          <line x1="2.8" y1="12" x2="21.2" y2="12"/>
+          <line x1="4.3" y1="7" x2="19.7" y2="7"/>
+          <line x1="4.3" y1="17" x2="19.7" y2="17"/>
+        </svg>
+      </span>
+      <span class="label">公式サイト</span>
+    </a>
+
+    <!-- 4. Instagram（公式グラデーション） -->
+    <a class="link-btn" href="https://www.instagram.com/nnoir__official"
+       target="_blank" rel="noopener noreferrer" aria-label="Instagramを開く">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="igGrad" x1="2" y1="22" x2="22" y2="2"
+                            gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#F58529"/>
+              <stop offset="0.5" stop-color="#DD2A7B"/>
+              <stop offset="1" stop-color="#8134AF"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+        </svg>
+      </span>
+      <span class="label">Instagram</span>
+    </a>
+
+    <!-- 5. LINEスタンプ（アクセント：濃いめピンク＋白文字＋白アイコン） -->
+    <a class="link-btn accent" href="https://store.line.me/stickershop/author/6254083/ja"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="LINEスタンプ（なう＆ねる）の最新スタンプ一覧を開く">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#ffffff" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+      </span>
+      <span class="label">最新スタンプはこちら♡</span>
+    </a>
+
+  </nav>
+
+  <div class="characters" aria-hidden="true">
+    <img src="assets/links/pair.png" alt="">
+  </div>
+</body>
+</html>
