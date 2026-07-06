@@ -586,6 +586,16 @@ canvas#particle-canvas {
   object-fit: cover;
 }
 
+.about-card-figure {
+  width: min(100%, 300px);
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover .about-card-figure {
+  transform: scale(1.03);
+}
+
 .about-name {
   font-size: 22px;
   font-weight: 700;
