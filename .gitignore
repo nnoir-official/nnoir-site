@@ -1,2 +1,5 @@
 .DS_Store
 .claude/
+
+# 手元用のバックアップ（公開サイトには出さない）
+links_backup.html
